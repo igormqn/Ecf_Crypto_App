@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <title>ZEC Chart</title>
+    <link rel="stylesheet" href="./css/chart.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        async function fetchCryptoData() {
+          try {
+            const response = await fetch(`https://api.coingecko.com/api/v3/coins/zcash/market_chart?vs_currency=usd&days=7&interval=daily&precision=4`);
+            
+            // Vérifiez le statut de la réponse
+            if (response.status === 401) {
+              throw new Error("Erreur d'authentification : Vérifiez votre accès à l'API.");
+            }
+            
+            const data = await response.json();
+
+            if (data.prices.length > 0) {
+              const prices = data.prices;
+
+              const ctx = document.getElementById("cryptoChart").getContext("2d");
+              new Chart(ctx, {
+                type: "line",
+                data: {
+                  labels: prices.map(item => new Date(item[0]).toLocaleDateString()),
+                  datasets: [{
+                    label: "Zcash Price (USD)",
+                    data: prices.map(item => item[1]),
+                    borderColor: "purple", // Couleur violette pour Zcash
+                    fill: false,
+                  }]
+                },
+                options: {
+                  responsive: true,
+                },
+              });
+            }
+          } catch (error) {
+            console.error(error);
+          }
+        }
+      
+        fetchCryptoData();
+      </script>    
+</head>
+<body>
+    <h2>Zcash Price Chart (Weekly)</h2>
+    <div class="live-chart"></div>
+    <canvas id="cryptoChart" width="200" height="100"></canvas>
+</body>
+</html>

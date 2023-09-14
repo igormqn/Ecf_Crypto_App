@@ -1,0 +1,154 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  body {
+    background-color: #99B0F3;
+  }
+  
+  header {
+    background-color: #07297C;
+    color: #1554F0;
+    visibility: hidden;
+    font-family: "Roboto";
+    height: 6rem;
+  }
+  @media screen and (max-width: 600px) {
+    header {
+      visibility: visible;
+      color: #7C7C84;
+    }
+  }
+  
+  header h1 {
+    text-align: center;
+    visibility: visible;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    header h1 {
+      margin-left: 3rem;
+      padding-top: 1rem;
+      text-align: left;
+    }
+  }
+  @media screen and (max-width: 200px) {
+    header h1 {
+      margin-left: 1rem;
+      padding-top: 1rem;
+      text-align: left;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .Erreur {
+    color: red;
+    margin: 10px 0;
+    text-align: center;
+  }
+  .connexion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+  -webkit-.connexion-form{
+    display: flex;
+    flex-direction: column;
+  }
+  .input-block input {
+    height: 3rem;
+    border-radius: 2rem;
+    width: 35rem;
+    padding-left: 2rem;
+
+  }
+  @media screen and (max-width: 800px){
+    .input-block input{
+      width: 30rem;
+    }
+  }
+
+  @media screen and (max-width: 600px){
+    .input-block input{
+      width: 20rem;
+    }
+  }
+
+  @media screen and (max-width: 400px){
+    .input-block input{
+      width: 15rem;
+    }
+  }
+
+  @media screen and (max-width: 300px){
+    .input-block input{
+      width: 10rem;
+    }
+  }
+
+    @media screen and (max-width: 200px){
+      .input-block input{
+        width: 8rem;
+      }
+  }
+  .button-block {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    animation: opacity 2s forwards;
+  }
+  @media screen and (max-width: 600px) {
+    .button-block {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  .button-block form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .button-block button {
+    border-radius: 10rem;
+    border: none;
+    height: 3rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    color: #7C7C84;
+    font-size: 1.1rem;
+    box-shadow: 16px 21px 18px 9px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+  #connexion {
+    background-color: #07297C;
+    animation-delay: 1s;
+    animation: opacity;
+    animation-duration: 1s;
+  }
+  
+  .button-block button:hover {
+    transform: scale(1.05);
+    color: white;
+    cursor: pointer;
+  }
+  
+  .button-block a {
+    color: #07297C;
+    font-family: "Roboto";
+    font-size: 0.8rem;
+    text-decoration: none;
+    text-align: center;
+  }
+  
+  .button-block a:hover {
+    text-decoration: underline;
+  }
+  

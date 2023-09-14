@@ -1,0 +1,130 @@
+
+  
+  body {
+    background-color: #99B0F3;
+    color: #7C7C84;
+  }
+  
+  h1 {
+    font-family: "Roboto";
+    text-align: center;
+    margin-top: 5rem;
+    color: #1554F0;
+    animation-name: slideInBottom;
+    animation-duration: 1.2s;
+  }
+  
+  .logo-images img {
+    height: 10rem;
+    width: 10rem;
+    transition: all 1s;
+    animation-name: opacity;
+    animation-duration: 3s;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  @media screen and (max-width: 600px) {
+    .logo-images img {
+      height: 8rem;
+      width: 8rem;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  @media screen and (max-width: 300px) {
+    .logo-images img {
+      height: 5rem;
+      width: 5rem;
+    }
+  }
+  
+  .logo-images img:hover {
+    transform: scale(1.15);
+    rotate: 90deg;
+  }
+  
+  .button-block {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+    animation: opacity 2s forwards;
+  }
+  @media screen and (max-width: 600px) {
+    .button-block {
+      padding-left: 1rem;
+      padding-right: 1rem;
+    }
+  }
+  
+  .button-block button {
+    border-radius: 10rem;
+    border: none;
+    height: 3rem;
+    font-family: "Roboto";
+    font-weight: 700;
+    color: #7C7C84;
+    font-size: 1.1rem;
+    box-shadow: 16px 21px 18px 9px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s;
+  }
+  
+  #create-account {
+    background-color: #1554F0;
+    animation-delay: 1s;
+    animation: opacity;
+    animation-duration: 1s;
+  }
+  
+  .button-block button:hover {
+    transform: scale(1.05);
+    color: white;
+    cursor: pointer;
+  }
+  
+  #connect {
+    background-color: #07297C;
+    animation-delay: 4s;
+    animation: opacity;
+    animation-duration: 3s;
+  }
+  
+  @keyframes slideInBottom {
+    from {
+      transform: translateY(120px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes Scale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.3);
+    }
+  }
+  @keyframes opacity {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  .animate--fast {
+    animation-duration: 0.9s;
+  }
+  
+  .animate--slow {
+    animation-duration: 1.9s;
+  }
+ 
+  

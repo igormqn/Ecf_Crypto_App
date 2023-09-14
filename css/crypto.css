@@ -1,0 +1,320 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    background-color: #99B0F3;
+  }
+  @media screen and (max-width: 150px) {
+    body {
+      overflow-x: hidden;
+    }
+  }
+  
+  header {
+    background-color: #07297C;
+    color: #1554F0;
+    visibility: hidden;
+    font-family: "Roboto";
+    height: 6rem;
+  }
+  @media screen and (max-width: 600px) {
+    header {
+      visibility: visible;
+      color: #7C7C84;
+    }
+  }
+  
+  header h1 {
+    text-align: center;
+    visibility: visible;
+    padding-top: 1rem;
+  }
+  @media screen and (max-width: 600px) {
+    header h1 {
+      margin-left: 3rem;
+      padding-top: 1rem;
+      text-align: left;
+    }
+  }
+  
+
+  .profile {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 200px;
+}
+ .profile img{
+  border-radius: 1rem;
+  height: 150px;
+  width: 150px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+ }
+
+ .profile form {
+  display: flex;
+  flex-direction: column;
+ }
+ .custom-file-input {
+ color: transparent;
+ font-size: 1rem;
+}
+
+.custom-file-input::after {
+  content: "Choisissez une photo";
+}
+
+ .submit-input{
+  font-size: 1rem;
+ }
+  .info-block {
+    text-align: center;
+    margin-top: 5rem;
+  }
+  form input[type=file]
+  .account-administrator {
+    margin-top: 10px;
+  }
+  
+  .account-administrator a {
+    text-decoration: none;
+    font-family: "Roboto";
+  }
+  
+  .account-administrator a:hover {
+    text-decoration: underline;
+    font-family: "Roboto";
+  }
+  
+  #modify-account {
+    color: #07297C;
+  }
+  
+  #delete-account {
+    color: red;
+  }
+  
+  .crypto-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+  }
+  @media screen and (max-width: 300px) {
+    .crypto-container {
+      padding: 0;
+      padding-top: 1rem;
+    }
+  }
+  
+  .crypto-block {
+    background-color: #7C7C84;
+    width: 100%;
+    height: 50px;
+    border-radius: 0.7rem;
+    cursor: pointer;
+  }
+  
+  .crypto-info {
+    display: flex;
+  }
+  
+  .crypto-info img {
+    margin-top: 0.5rem;
+    margin-left: 0.5rem;
+    height: 30px;
+  }
+  
+  .crypto-chart {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .crypto-chart img {
+    width: 140px;
+  }
+  @media screen and (max-width: 300px) {
+    .crypto-chart img {
+      width: 75px;
+    }
+  }
+  @media screen and (max-width: 200px) {
+    .crypto-chart img {
+      width: 50px;
+    }
+  }
+  
+  .crypto-data {
+    display: flex;
+    flex-direction: column;
+    margin-top: 4px;
+    gap: 4px;
+    font-family: "Roboto";
+    font-weight: 700;
+  }
+  @media screen and (max-width: 300px) {
+    .crypto-data {
+      font-size: 0.8rem;
+    }
+  }
+  @media screen and (max-width: 200px) {
+    .crypto-data {
+      font-size: 0.5rem;
+    }
+  }
+  
+  #BTC {
+    color: red;
+  }
+  
+  #ETH {
+    color: red;
+  }
+  
+  #TETH {
+    color: red;
+  }
+  
+  #LTC {
+    color: red;
+  }
+  
+  #ZSH {
+    color: red;
+  }
+  
+  #SOL {
+    color: red;
+  }
+  
+  footer {
+    background-color: #D1D1D1;
+  }
+  
+  footer h1 {
+    color: #07297C;
+    font-weight: 600;
+    font-family: "Roboto";
+    margin-left: 3rem;
+  }
+  @media screen and (max-width: 300px) {
+    footer h1 {
+      margin-left: 1rem;
+      font-size: 1.5rem;
+    }
+  }
+  
+  .message-block {
+    padding: 3rem;
+    font-family: "Roboto";
+  }
+
+  .message-block form {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .message-block input[type=email] {
+    height: 50px;
+    border-radius: 1rem;
+    padding-left: 1rem;
+  }
+  
+  .message-block input[type=message] {
+    height: 100px;
+    border-radius: 1rem;
+    padding-bottom: 3rem;
+    padding-left: 1rem;
+  }
+  
+  .follow-us img {
+    height: 50px;
+    width: 50px;
+  }
+  @media screen and (max-width:450px) {
+    .follow-us img {
+      font-weight: 1rem;
+    }
+
+  }
+  
+  .follow-us {
+    display: flex;
+    gap: 2rem;
+    font-size: 3rem;
+    margin-left: 30%;
+  }
+  @media screen and (max-width: 450px) {
+    .follow-us {
+      display: block;
+      flex-wrap: wrap;
+      font-size: 2.5rem;
+      margin-left: 15%;
+    }
+  }
+  @media screen and (max-width: 350px) {
+    .profile {
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      height: 100px;
+  }
+
+.profile img {
+  height:90px;
+  width: 90px;
+}
+  .profile form {
+margin-top: 1rem;
+}
+    .custom-file-input {
+      font-size: 0.8rem;
+     }
+     .submit-input{
+      font-size: 0.8rem;
+      margin-top: 1rem;
+     }
+     .info-block{
+      margin-top: 9rem;
+     }
+     .info-container {
+      font-size: 0.8rem;
+     }
+    .follow-us {
+      display: block;
+      flex-wrap: wrap;
+      font-size: 2rem;
+      margin-left: 3%;
+    }
+  }
+  
+  #facebook-logo {
+    color: #07297C;
+  }
+  
+  #linkedin-logo {
+    color: #4a7cfc;
+  }
+  
+  #twitter-logo {
+    color: lightblue;
+  }
+  
+  #instagram-logo {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    border-radius: 1rem;
+    color: #d6249f;
+  }
+  
+  /*# sourceMappingURL=crypto.css.map */
+  
